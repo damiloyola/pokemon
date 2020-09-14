@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Grandstander", "sans-serif";
 }
 
 body {
@@ -55,5 +56,17 @@ body #container form input:not(:placeholder-shown) {
   border-top: 5px solid red;
   border-bottom: 2px solid black;
   background-image: none;
+}
+
+body #container #buscar {
+  display: block;
+  border: none;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 20px auto;
+  font-weight: 500;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
