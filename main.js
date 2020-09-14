@@ -1,3 +1,4 @@
+//FUNCION QUE MUESTRA EN EL DOM EL POKEMON QUE SE LE PASO COMO OBJETO
 const render = (pokemon) => {
   const container = document.getElementById("show");
   const div = document.createElement("div");
@@ -11,11 +12,15 @@ const render = (pokemon) => {
   div.appendChild(sprite);
   container.appendChild(div);
 };
+
+//FUNCION PARA LIMPIAR EL DOM DONDE SE VA A RENDERIZAR LOS PKMN
 const clear = () => {
   for (let i = 0; i < 3; i++) {
     document.querySelector("#show div").remove();
   }
 };
+
+//FUNCION QUE GENERA ARRAY DE ENDPOINTS SEGUN LOS ID INGRESADOS POR USUARIO
 const urlGenerator = () => {
   const url = "https://pokeapi.co/api/v2/pokemon/";
   const id1 = document.getElementById("input1").value;
@@ -24,6 +29,8 @@ const urlGenerator = () => {
 
   return [url + id1 + "/", url + id2 + "/", url + id3 + "/"];
 };
+
+//FUNCION PRINCIPAL QUE GENERA LAS PROMESAS DE FETCH EN CADENA Y VA RENDERIZANDO EN DOM
 const promiseGenerator = () => {
   let arr = urlGenerator();
 
@@ -43,6 +50,7 @@ const promiseGenerator = () => {
     .then(clear())
     .catch((err) => console.log(err));
 };
-const btn = document.getElementById("buscar");
 
+//SE AGREGA LISTENER AL BOTON DE BUSCAR
+const btn = document.getElementById("buscar");
 btn.addEventListener("click", promiseGenerator);

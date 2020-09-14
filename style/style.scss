@@ -17,7 +17,7 @@ body {
 
   #container {
     width: 80%;
-    margin: 3% auto;
+    margin: 2% auto;
     h3 {
       text-align: center;
       margin: 15px 0;
@@ -61,6 +61,20 @@ body {
       margin: 20px auto;
       font-weight: 500;
       font-size: 20px;
+      outline: none;
+    }
+
+    #show {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 50px;
+      div {
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
     }
   }
 }

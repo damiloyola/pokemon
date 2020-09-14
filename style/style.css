@@ -21,7 +21,7 @@ body header img {
 
 body #container {
   width: 80%;
-  margin: 3% auto;
+  margin: 2% auto;
 }
 
 body #container h3 {
@@ -68,5 +68,24 @@ body #container #buscar {
   margin: 20px auto;
   font-weight: 500;
   font-size: 20px;
+  outline: none;
+}
+
+body #container #show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+body #container #show div {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
